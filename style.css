@@ -1,0 +1,150 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   background: rgb(44, 44, 44);
+}
+.container{
+   max-width: 1000px;
+   margin: 0 auto;
+}
+.container-small{
+   width: 100%;
+}
+form{
+   display: flex;
+   font-size: 17px;
+   margin: 40px 20px 20px 20px;
+   flex-direction: column;
+   color: white;
+}
+form label {
+   margin: 0 0 15px 0;
+   display: flex;
+}
+form label .span1{
+   min-width: 121px;
+   margin-right: 6px;
+}
+form label .span2{
+   min-width: 106px;
+   margin-right: 5px;
+}
+form label input{
+   width: 100%;
+   padding: 4px 0;
+   border: none;
+   border-bottom: 1px solid white;
+   outline: none;
+   background: none;
+   color: rgb(222, 222, 222);
+}
+option{
+   color: black;
+}
+form label select{
+   width:100%;
+   padding: 4px 0;
+   color:rgb(222, 222, 222) ;
+   border: none;
+   outline: none;
+   background: none;
+   border-bottom: 1px solid white;
+   cursor: pointer;
+}
+form button{
+   border: 1px solid rgb(82, 137, 148) ;
+   background: none;
+   color: white;
+   padding: 10px 0;
+   border-radius: 10px;
+   cursor: pointer;
+}
+form button:hover{
+     background: rgb(82, 137, 148);
+     color: white;
+}
+.container-res{
+   background: whitesmoke;
+   margin: 20px;
+   height: 50vh;
+   text-align: center;
+   border-radius: 10px;
+   color: rgb(58, 58, 58);
+   display: none;
+}
+.container-res .container-city p{
+padding: 30px 0 10px 0;
+font-size: 30px;
+font-weight: 600;
+}
+.container-res .container-date p{
+   padding: 0 0 16px 0;
+   font-size: 13px;
+}
+.container-res .container-img{
+   justify-content: center;
+   display: flex;
+   margin: 2px 0 30px 0;
+   padding: 0;
+   height: 80px;
+}
+.container-res .container-img p{
+   position: relative;
+   top: 30px;
+   font-size: 26px;
+   font-weight: 600;
+}
+.container-res .container-img img{
+   width: 115px;
+   max-height: 80px;
+}
+.container-res .container-descripcion p{
+   font-size: 20px;
+   font-weight: 200;
+   padding-bottom: 20px;
+   text-transform: capitalize;
+}
+.container-res .container-temp p{
+    font-size: 22px;
+}
+footer{
+   position: fixed;
+   bottom: 0;
+   text-align: center;
+   width: 100%;
+   color: white;
+   padding-bottom: 10px;
+   border-top: 1px solid rgb(82, 137, 148);
+   font-size: 16px;
+}
+footer .copy{
+  margin: 10px 0 7px 0;
+}
+@media(max-width:430px) {
+   form label{
+      display: flex;
+      flex-direction: column;
+   }
+   form label input, form label select{
+      width: 100%;
+      margin-top: 4px;
+   }
+}
+/* validacion */
+.container-small small{
+  visibility: hidden;
+  position: absolute;
+}
+.mostrar small{
+   visibility: visible;
+   width: 100%;
+   left: 0;
+   top: 90px;
+   color: red;
+}
+.mostrar{
+   width: 100%;
+}
