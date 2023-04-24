@@ -99,6 +99,7 @@ font-weight: 600;
 }
 .container-res .container-img img{
    width: 115px;
+   margin-right: 10px;
    max-height: 80px;
 }
 .container-res .container-descripcion p{

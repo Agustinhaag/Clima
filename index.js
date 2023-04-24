@@ -77,6 +77,10 @@ function actualizarimg(data){
         case "10n":
             src= "img/luna-lluvia.png"
             break;
+        case "50d":
+        case "50n":
+            src = "img/niebla.jpg";
+            break;
     }
      img.src= src;
 }
