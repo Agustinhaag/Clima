@@ -3,12 +3,13 @@
    padding: 0;
    box-sizing: border-box;
 }
-body{
+.body{
    background: rgb(44, 44, 44);
 }
-.container{
+.container-all{
    max-width: 1000px;
    margin: 0 auto;
+   min-height: 80vh;
 }
 .container-small{
    width: 100%;
@@ -25,12 +26,10 @@ form label {
    display: flex;
 }
 form label .span1{
-   min-width: 121px;
-   margin-right: 6px;
+   min-width: 140px;
 }
 form label .span2{
-   min-width: 106px;
-   margin-right: 5px;
+   min-width: 120px;
 }
 form label input{
    width: 100%;
@@ -69,7 +68,8 @@ form button:hover{
 .container-res{
    background: whitesmoke;
    margin: 20px;
-   height: 50vh;
+   padding-bottom: 20px;
+   height: 100%;
    text-align: center;
    border-radius: 10px;
    color: rgb(58, 58, 58);
@@ -112,17 +112,22 @@ font-weight: 600;
     font-size: 22px;
 }
 footer{
-   position: fixed;
-   bottom: 0;
    text-align: center;
    width: 100%;
    color: white;
+   display: flex;
+   flex-direction: column;
    padding-bottom: 10px;
    border-top: 1px solid rgb(82, 137, 148);
    font-size: 16px;
 }
 footer .copy{
   margin: 10px 0 7px 0;
+}
+.select-error{
+    color: #dc3545; 
+  font-size: .875em; 
+  margin-top: 4px;
 }
 @media(max-width:430px) {
    form label{
@@ -133,19 +138,4 @@ footer .copy{
       width: 100%;
       margin-top: 4px;
    }
-}
-/* validacion */
-.container-small small{
-  visibility: hidden;
-  position: absolute;
-}
-.mostrar small{
-   visibility: visible;
-   width: 100%;
-   left: 0;
-   top: 90px;
-   color: red;
-}
-.mostrar{
-   width: 100%;
 }

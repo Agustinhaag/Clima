@@ -1,0 +1,28 @@
+{
+  "name": "clima",
+  "version": "1.0.0",
+  "description": "![Captura web_22-4-2023_145158_127 0 0 1](https://user-images.githubusercontent.com/122823252/233799354-a4852989-2555-4bc9-bd0a-dd260e034612.jpeg)",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "dev":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agustinhaag/Clima.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Agustinhaag/Clima/issues"
+  },
+  "homepage": "https://github.com/Agustinhaag/Clima#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "nodemon": "^3.0.1"
+  }
+}

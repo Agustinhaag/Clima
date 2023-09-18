@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <title>Clima</title>
+</head>
+<body class="body">
+    <main>
+    <div class="container-all">
+        <form action="/" method="post">
+          <label for="text"><span class="span1"> Ingrese la ciudad:</span>
+            <div class="container-small"> 
+                <input placeholder="Buscar ciudad" id="text" name="text" value="<%=values.text %>" class="form-control <%= errors && errors.find(error => error.path === 'text') ? 'is-invalid' : '' %>" type="text">
+                <% if(typeof errors !== "undefined"){ %>
+                       <%const textError = errors.find(error => error.path === "text");%>
+                       <div class="invalid-feedback">
+                            <%= textError ? textError.msg : '' %>
+                       </div>
+
+              <%  } %>
+            </div> 
+          </label>
+         <label for="codigo"><span class="span2">Ingrese el País:</span>
+         <div class="container-small">  
+           <select name="country" id="codigo" class="form-control <%= errors && errors.find(error => error.path === 'country') ? 'is-invalid' : '' %>">
+            <option value=""></option>
+            <option value="ar">Argentina</option>
+            <option value="us">Estados unidos</option>
+            <option value="br">Brasil</option>
+            <option value="cl">Chile</option>
+            <option value="py">Paraguay</option>
+            <option value="uy">Uruguay</option>
+            <option value="bo">Bolivia</option>
+            <option value="uk">Inglaterra</option>
+           </select>
+             <% if(typeof errors !== "undefined"){ %>
+                       <%const countryError = errors.find(error => error.path === "country");%>
+                       <div class="select-error">
+                            <%= countryError ? countryError.msg : '' %>
+                       </div>
+
+              <%  } %>
+        </div> 
+        </label>
+         <button id="btn" type="submit">Buscar</button>
+        </form>
+        <div class="container-res" id="res">
+        </div>
+    </div>
+</main>
+<footer>
+    <p class="copy">Creado por Agustin Haag</p>
+    <p >&copy;All rights reserved 2023 - Open weather</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script defer src="js/index.js"></script>
+</body>
+</html>
